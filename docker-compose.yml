@@ -1,0 +1,14 @@
+version: '2'
+services:
+  swan-admin:
+    image: swan/admin
+    ports:
+      - "8080:8080"
+    environment:
+      - spring.profiles.active=dev
+  swan-api:
+    image: swan/api
+    ports:
+      - "8081:8081"
+    environment:
+      - spring.profiles.active=dev
